@@ -1,0 +1,23 @@
+include head.jade
+header.esheader
+  nav(role="navigation").navbar.navbar-inverse
+    .container.text-center
+      .navbar-header
+        button(type="button", data-toggle="collapse", data-target=".navbar-ex1-collapse").navbar-toggle.collapsed
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a(href="index.html" ).navbar-brand 
+          img(src="https://lh5.ggpht.com/os24uxf-H8-xXILkQzMOPso8PtGWgVEceCj6tZyzYyIVdXQd9onEK1wzY3wv1tdo3CI=w300")
+        a(href="index.html" ).navbar-text Державні послуги Києва
+      a(href="help.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Як працює").btn.btn-primary.navbar-btn.navbar-right 
+        i.fa.fa-info
+      a(href="index.html#top" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Пошук").btn.btn-primary.navbar-btn.navbar-right 
+        i.fa.fa-search 
+      .navbar-collapse.collapse.navbar-ex1-collapse.text-center
+        ul.nav.navbar-nav.center
+          li: a(href="index.html") Послуги
+          li: a(href="status.html") Статус
+          li: a(href="help.html") Допомога
+          li: a(href="index.html") Пошук

@@ -1,0 +1,47 @@
+include ./templates/header.jade
+section
+  .container.text-center
+    .col-md-12
+      h1 Заявки
+      p На цій сторінці Ви можете переглянути статус по своїй заявці за її номером.
+    .col-sm-6.col-sm-offset-3.col-md-6.col-md-offset-3
+      form
+        .form-group
+          .input-group
+            span.input-group-addon Номер
+            input#addon1.form-control(type='text')
+            span.input-group-btn
+              button.btn.btn-primary(type='button') Переглянути
+  
+  .container
+    .well
+      h5 Назва: 
+      table.table
+        thead
+          tr
+            th.col-sm-4
+              p Час
+            th.col-sm-8
+              p Статус
+        tbody
+          tr
+            td
+            td  - new
+
+  .container.status
+    .list-group-item
+      span Увійти через: &nbsp
+      a.btn.btn-raised.btn-primary(href='#')
+        img(src="images/7f6e9dc7.bank-id.png")
+        span.btn-text BankID
+      button.btn.btn-raised.btn-success.i-btn-badge
+        img(src="images/bafccf73.badge.png")
+        span.btn-text 
+          div Сертифікат електронно-
+          div цифрового підпису
+      button.btn.btn-raised.btn-info
+        i.fa.fa-envelope
+        span.btn-text Email
+
+
+include ./templates/footer.jade

@@ -1,0 +1,61 @@
+header
+  margin-bottom: 80px
+
+  .navbar, .navbar.navbar-default
+    margin-bottom: 0
+    background-color: #fff
+    color: #000
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+  .navbar-brand
+    text-transform: uppercase
+    font-family: NotoSans
+
+    .navbar-nav.center
+      text-align: center
+      a
+        text-transform: uppercase
+        font-family: NotoSans
+        font-size: 16px
+        &:hover
+          color: #009688
+
+  .btn-group-sm .btn.btn-fab, .btn-group-sm .input-group-btn .btn.btn-fab, .btn.btn-fab.btn-fab-mini, .input-group-btn .btn.btn-fab.btn-fab-mini
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+  @media (min-width: 748px)
+    .navbar-nav.center
+      width: 100%
+      position: absolute
+      text-align: center
+      & > li
+        float: none
+        display: inline-block
+        &:hover
+          box-shadow: inset 0px -6px 0px 0px rgba(0, 150, 136, 1)
+          -moz-box-shadow: inset 0px -6px 0px 0px rgba(0, 150, 136, 1)
+          -webkit-box-shadow: inset 0px -6px 0px 0px rgba(0, 150, 136, 1)
+        a
+          text-transform: uppercase
+          font-family: helvetica-lt
+          font-size: 16px
+          &:hover
+            color: #009688
+
+    .navbar-nav.lang
+      width: 50px;
+
+    .navbar-collapse
+      position: relative
+
+@media (max-width: 748px)
+  header
+    margin-bottom: 0
+    .navbar-fixed-top, .navbar-fixed-bottom
+      position: relative !important
+    .navbar-default .navbar-toggle
+      border: none
+    .btn-group-sm .btn.btn-fab, .btn-group-sm .input-group-btn .btn.btn-fab, .btn.btn-fab.btn-fab-mini, .input-group-btn .btn.btn-fab.btn-fab-mini
+      display: none

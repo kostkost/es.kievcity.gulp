@@ -1,0 +1,70 @@
+include ./templates/header.jade
+section
+  .container
+    h4 Назва послуги яку обрав користувач
+    h4 Установа що надає послугу
+    ul.nav.nav-tabs
+      li.active
+        a(href='/service/1397/general') Послуга
+      li
+        a(href='/help.html') Як працює
+
+  
+  .container
+    .list-group-item
+      span.ng-binding Крок 1. Увійдіть в систему через
+      button.btn.btn-info(style='display: none')
+        i.icon-door-lock
+        span.btn-text igov.org.ua
+      a.btn.btn-info.ng-scope(target='_self', ng-href='https://es.kievcity.gov.ua:443/auth/bankID?link=https://es.kievcity.gov.ua:443/service/1397/general/place/built-in/region/5/city/0', ng-if="!authMethods || authMethods.indexOf('BankID') > -1", href='https://es.kievcity.gov.ua:443/auth/bankID?link=https://es.kievcity.gov.ua:443/service/1397/general/place/built-in/region/5/city/0')
+        i.icon-bank-id
+        span.btn-text BankID
+      button.btn(style='display: none')
+        i.icon-mobil-id
+      a.btn.btn-info_.btn-success.i-btn-badge.ng-scope(target='_self', ng-href='https://es.kievcity.gov.ua:443/auth/eds?link=https://es.kievcity.gov.ua:443/service/1397/general/place/built-in/region/5/city/0', ng-if="!authMethods || authMethods.indexOf('EDS') > -1", href='https://es.kievcity.gov.ua:443/auth/eds?link=https://es.kievcity.gov.ua:443/service/1397/general/place/built-in/region/5/city/0')
+        i.icon-badge
+        span.btn-text
+          div Сертифікат електронно-
+          div цифрового підпису
+
+  .container
+    .list-group-item
+      span.ng-binding Крок 2.
+      form.form-horizontal
+           fieldset
+             .form-group
+               label.col-md-2.control-label(for='inputEmail') Email
+               .col-md-10
+                 input#inputEmail.form-control(type='email', placeholder='Email')
+             .form-group
+               label.col-md-2.control-label(for='inputPassword') Password
+               .col-md-10
+                 input#inputPassword.form-control(type='password', placeholder='Password')
+             .form-group(style='margin-top: 0;')
+               // inline style is just to demo custom css to put checkbox below input above
+               .col-md-offset-2.col-md-10
+                 .checkbox
+                   label
+                     input(type='checkbox')
+                     |  Checkbox
+                   label
+                     input(type='checkbox', disabled='')
+                     |  Disabled Checkbox
+             .form-group
+               .col-md-offset-2.col-md-10
+                 .togglebutton
+                   label
+                     input(type='checkbox', checked='')
+                     |  Toggle button
+             .form-group
+               label.col-md-2.control-label(for='textArea') Textarea
+               .col-md-10
+                 textarea#textArea.form-control(rows='3')
+                 span.help-block
+                   | A longer block of help text that breaks onto a new line and may extend beyond one line.
+             .form-group
+               .col-md-10.col-md-offset-2
+                 button.btn.btn-default(type='button') Cancel
+                 button.btn.btn-primary(type='submit') Submit
+
+include ./templates/footer.jade
