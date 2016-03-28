@@ -1,0 +1,57 @@
+include templates/head.jade
+.container-fluid.menu-left
+  .row
+    .col-sm-3.col-md-2.sidebar
+      a(href="").brand
+        img(src="https://lh5.ggpht.com/os24uxf-H8-xXILkQzMOPso8PtGWgVEceCj6tZyzYyIVdXQd9onEK1wzY3wv1tdo3CI=w300")
+        span Електронні послуги онлайн
+
+      //- form
+        .form-group.label-floating
+          label.control-label(for='addon2') Пошук послуг
+          .input-group
+            input#addon2.form-control(type='text')
+            span.input-group-btn
+              button.btn.btn-sm.btn-link(type='button') 
+                i.fa.fa-search
+
+      ul.nav.nav-pills.nav-stacked.text-uppercase.text-center.nav-left-menu
+        li(role='presentation')
+          a(href='#') Пошук
+        li(role='presentation')
+          a(href='#') Статуси
+        li(role='presentation')
+          a(href='#') Допомога
+
+    .col-sm-9.col-md-10.col-sm-offset-3.col-md-offset-2.header-content
+      .header-bg
+        .hero.vertical-center
+          h1.text-center Державні послуги онлайн
+      .well.text-center
+        form.form-inline
+          .form-group.label-floating
+            label.control-label(for='addon2') Пошук послуг
+            .input-group
+              input#addon2.form-control(type='text')
+              span.input-group-btn
+                button.btn.btn-link(type='button') 
+                  i.fa.fa-search          
+          button.btn.btn-link(type='button') 
+            i.fa.fa-cogs
+          //- .btn-group
+            a.btn.btn-raised.dropdown-toggle(href='bootstrap-elements.html', data-target='#', data-toggle='dropdown')
+              | Оберіть установу
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href='javascript:void(0)') Dropdown link
+              li
+                a(href='javascript:void(0)') Dropdown link
+              li
+                a(href='javascript:void(0)') Dropdown link
+    .col-sm-9.col-md-10.col-sm-offset-3.col-md-offset-2.content
+      include ./templates/content-list.jade
+script(src='/js/lib.js')
+script(src='http://cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js')
+script(src='https://cdn.rawgit.com/FezVrasta/dropdown.js/master/jquery.dropdown.js')
+script(src='/js/main.js')

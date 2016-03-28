@@ -28,20 +28,7 @@ section
             td
             td  - new
 
-  .container.status
-    .list-group-item
-      span Увійти через: &nbsp
-      a.btn.btn-raised.btn-primary(href='#')
-        img(src="images/7f6e9dc7.bank-id.png")
-        span.btn-text BankID
-      button.btn.btn-raised.btn-success.i-btn-badge
-        img(src="images/bafccf73.badge.png")
-        span.btn-text 
-          div Сертифікат електронно-
-          div цифрового підпису
-      button.btn.btn-raised.btn-info
-        i.fa.fa-envelope
-        span.btn-text Email
+  include ./templates/loginbtns.jade
 
 
 include ./templates/footer.jade

@@ -8,11 +8,15 @@
 @import 'libs/default'
 @import 'libs/component'
 
+@import 'libs/set2'
+
 @import 'templates/header'
 @import 'templates/search'
 @import 'templates/content-list'
 @import 'templates/status'
 @import 'templates/footer'
+
+@import 'templates/menu-left'
 
 
 @font-face
@@ -41,10 +45,15 @@
   font-family: "NotoSerif"
   src: url(/fonts/NotoSerif-Regular.ttf)
 
+$primary-color: #303F9F
+$secondary-color: #7986CB
+
 body 
   font-family: 'NotoSans', sans-serif
 a
-  color: #3f51b5
+  color: $primary-color
+  &:hover
+    color: $secondary-color
   
 .vertical-center
   position: relative
@@ -54,13 +63,17 @@ a
 h1
   font-family: "NotoSansBold"
 
+.container-fluid img
+  width: 100%
+  height: auto
+
 #back-top span
   position: fixed;
   bottom: 4em;
   right: 2em;
   height: 45px;
   width: 45px;
-  background: #3f51b5 url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjE0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNSAzaC0xLjk3NXYxMWgtMXYtMTFoLTIuMDI1bDIuNDk5LTMgMi41MDEgM3oiLz48L3N2Zz4=') no-repeat center center;
+  background: $secondary-color url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjE0Ij48cGF0aCBmaWxsPSIjZmZmIiBkPSJNNSAzaC0xLjk3NXYxMWgtMXYtMTFoLTIuMDI1bDIuNDk5LTMgMi41MDEgM3oiLz48L3N2Zz4=') no-repeat center center;
   cursor: pointer;
   -moz-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   -o-transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
